@@ -26,6 +26,10 @@
   letter-spacing: 0.03em;
 }
 
+.list-style > .action {
+  color: var(--action-text-color);
+}
+
 .main-navigation {
   font-weight: 500;
   font-size: 14px;
@@ -187,6 +191,7 @@ footer {
 }
 
 .fact-address {
+  font-style: normal;
   line-height: 1.7;
   color: #ffffff;
   cursor: default;
