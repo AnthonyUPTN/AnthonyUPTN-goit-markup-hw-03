@@ -1,0 +1,237 @@
+/*элементы хедера*/
+
+/*header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}*/
+
+:root {
+  --primary-text-color: #212121;
+  --second-text-color: #757575;
+  --action-text-color: #2196f3;
+}
+
+.web {
+  color: var(--action-text-color);
+}
+
+.webstudio-header {
+  font-family: 'Raleway', sans-serif;
+  color: #000000;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.main-navigation {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.contacts-header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+}
+
+/*ховеры и фокусы*/
+
+.contacts-header:hover,
+.contacts-footer:hover,
+.main-navigation:hover,
+.contacts-header:focus,
+.contacts-footer:focus,
+.main-navigation:focus {
+  color: var(--action-text-color);
+}
+
+.button-nav:hover,
+.button-nav:focus {
+  background-color: var(--action-text-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.hero-button:hover {
+  background-color: var(--action-text-color);
+  color: #ffffff;
+}
+
+/*button:hover {
+  background-color: var(--action-text-color);
+  color: white;
+}*/
+
+/*элементы основного контента*/
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--primary-text-color);
+}
+
+.list-style {
+  list-style: none;
+}
+
+.decoration {
+  text-decoration: none;
+}
+
+/*блок герой*/
+
+.hero-section {
+  background-color: #2f303a;
+}
+
+.hero-massage {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3;
+  /* text-align: center; */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-button {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+/*центральный контент*/
+
+.our-pluses {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.our-pluses-about {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-team-section {
+  background-color: #f5f4fa;
+}
+
+.our-team-names {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-team-job {
+  font-size: 16px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.team-card1,
+.team-card2,
+.team-card3,
+.team-card4 {
+  width: 270px;
+  height: 368px;
+}
+
+/*элементы футера*/
+
+footer {
+  background-color: #2f303a;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.webstudio-footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.fact-address {
+  line-height: 1.7;
+  color: #ffffff;
+  cursor: default;
+}
+
+.contacts-footer {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+/*страница портфолио*/
+
+.portfolio-main {
+  padding: 94px 215px 94px 215px;
+  color: var(--primary-text-color);
+}
+
+.button-nav {
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.button-nav {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.work-name {
+  color: var(--primary-text-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.work-type {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
