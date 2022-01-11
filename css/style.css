@@ -3,6 +3,7 @@
   --second-text-color: #757575;
   --action-text-color: #2196f3;
   --color-white: #fff;
+  --hero-bg-color: #2f303a;
 }
 
 /*глобальные элементы*/
@@ -23,6 +24,8 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  border-bottom: 1px solid #ececec;
 }
 
 li {
@@ -32,6 +35,7 @@ li {
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -42,10 +46,14 @@ ul {
   padding: 0;
 }
 
+.section {
+  padding: 94px 0;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /*элементы хедера*/
@@ -60,34 +68,50 @@ ul {
 }
 
 .web,
-.main-navigation.action {
+.nav-link.current {
   color: var(--action-text-color);
 }
 
-.main-navigation {
-  color: var(--primary-text-color);
+.nav-link {
+  color: inherit;
 }
 
-.header-navigation {
+.flex-header {
   display: flex;
+  align-items: center;
 }
 
-.main-navigation .action:not(:last-child) {
-  margin-left: 50px;
+.header-nav {
+  display: flex;
+  margin-left: 93px;
+  margin-right: 331px;
+}
+
+.nav-list {
+  padding: 32px 0;
+}
+
+.nav-list:not(:last-child),
+.contacts:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-list {
   color: var(--second-text-color);
 }
 
+.header-contacts {
+  display: flex;
+}
+
 /*ховеры и фокусы*/
 
 .contacts-list:hover,
 .contacts-footer:hover,
-.main-navigation:hover,
+.nav-list:hover,
 .contacts-list:focus,
 .contacts-footer:focus,
-.main-navigation:focus {
+.nav-list:focus {
   color: var(--action-text-color);
 }
 
@@ -105,7 +129,7 @@ ul {
 /*блок герой*/
 
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--hero-bg-color);
   letter-spacing: 0.06em;
 }
 
@@ -119,6 +143,7 @@ ul {
 }
 
 .hero-button {
+  display: block;
   border-color: transparent;
   border-radius: 4px;
 
@@ -127,28 +152,44 @@ ul {
   line-height: 1.87;
 
   cursor: pointer;
+  text-align: center;
 }
 
 /*центральный контент*/
 
 /* Наши положительные стороны */
 
-.our-pluses {
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 .pluses {
   display: flex;
 }
 
-.pluses-about,
-.our-team-job {
+.section-pluses {
+  padding-bottom: 0;
+}
+
+.our-pluses {
+  margin-bottom: 10px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.pluses-list {
+  width: 270px;
+}
+
+.pluses-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.pluses-about {
   line-height: 1.71;
   color: var(--second-text-color);
 }
 
 .section-title {
+  margin-bottom: 50px;
+
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
@@ -165,37 +206,11 @@ ul {
   margin-right: 30px;
 }
 
-.examples .examples-list:not(:last-child) {
+.examples-list:not(:last-child) {
   margin-right: 30px;
 }
 
 /* наша комманда */
-
-.our-team-section {
-  background-color: #f5f4fa;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-}
-
-.team-block .list:not(:last-child) {
-  margin-right: 30px;
-}
-
-.our-team-names {
-  font-weight: 500;
-}
-
-.team-card1,
-.team-card2,
-.team-card3,
-.team-card4 {
-  width: 270px;
-  height: 368px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
 
 .team-block {
   display: flex;
@@ -205,11 +220,48 @@ ul {
   display: block;
 }
 
+.team-section {
+  background-color: #f5f4fa;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.team-job {
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+  color: var(--second-text-color);
+}
+
+.team-names {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+}
+
+.card {
+  text-align: center;
+
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card:not(:last-child) {
+  margin-right: 30px;
+}
+
 /*элементы футера*/
 
 footer {
   background-color: #2f303a;
   line-height: 1.71;
+}
+
+.test {
+  padding-bottom: 60px;
 }
 
 .webstudio-footer {
@@ -229,6 +281,16 @@ footer {
 .contacts-footer {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo {
+  display: block;
+  padding-top: 60px;
+}
+
+.address {
+  margin-top: 20px;
+  padding-bottom: 60px;
 }
 
 /*страница портфолио*/
