@@ -5,14 +5,50 @@
   --color-white: #fff;
 }
 
-/*элементы хедера*/
+/*глобальные элементы*/
+
+body {
+  width: 1600px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--primary-text-color);
+
+  letter-spacing: 0.03em;
+}
 
 header {
+  width: 1600px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/*элементы хедера*/
 
 .webstudio-header {
   font-family: 'Raleway', sans-serif;
@@ -23,11 +59,8 @@ header {
   letter-spacing: 0.03em;
 }
 
-.web {
-  color: var(--action-text-color);
-}
-
-.list-style > .action {
+.web,
+.main-navigation.action {
   color: var(--action-text-color);
 }
 
@@ -35,23 +68,33 @@ header {
   color: var(--primary-text-color);
 }
 
-.contacts-header {
+.header-navigation {
+  display: flex;
+}
+
+.main-navigation .action:not(:last-child) {
+  margin-left: 50px;
+}
+
+.contacts-list {
   color: var(--second-text-color);
 }
 
 /*ховеры и фокусы*/
 
-.contacts-header:hover,
+.contacts-list:hover,
 .contacts-footer:hover,
 .main-navigation:hover,
-.contacts-header:focus,
+.contacts-list:focus,
 .contacts-footer:focus,
 .main-navigation:focus {
   color: var(--action-text-color);
 }
 
 .button-nav:hover,
-.button-nav:focus {
+.button-nav:focus,
+.hero-button:hover,
+.hero-button:focus {
   background-color: var(--action-text-color);
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -59,32 +102,11 @@ header {
   border-radius: 4px;
 }
 
-.hero-button:hover {
-  background-color: var(--action-text-color);
-  color: var(--color-white);
-}
-
-/*элементы основного контента*/
-
-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  color: var(--primary-text-color);
-  letter-spacing: 0.03em;
-}
-
-.list-style {
-  list-style: none;
-}
-
-.decoration {
-  text-decoration: none;
-}
-
 /*блок герой*/
 
 .hero-section {
   background-color: #2f303a;
+  letter-spacing: 0.06em;
 }
 
 .hero-massage {
@@ -92,30 +114,36 @@ body {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-white);
 }
 
 .hero-button {
-  font-family: inherit;
+  border-color: transparent;
+  border-radius: 4px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.06em;
+
   cursor: pointer;
-  border-color: transparent;
-  border-radius: 4px;
 }
 
 /*центральный контент*/
+
+/* Наши положительные стороны */
 
 .our-pluses {
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.our-pluses-about {
+.pluses {
+  display: flex;
+}
+
+.pluses-about,
+.our-team-job {
   line-height: 1.71;
   color: var(--second-text-color);
 }
@@ -127,22 +155,35 @@ body {
   text-align: center;
 }
 
+/* блок примеров работ */
+
+.examples {
+  display: flex;
+}
+
+.examples-list {
+  margin-right: 30px;
+}
+
+.examples .examples-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* наша комманда */
+
 .our-team-section {
   background-color: #f5f4fa;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team-block .list:not(:last-child) {
+  margin-right: 30px;
 }
 
 .our-team-names {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-}
-
-.our-team-job {
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  color: var(--second-text-color);
 }
 
 .team-card1,
@@ -151,6 +192,17 @@ body {
 .team-card4 {
   width: 270px;
   height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-block {
+  display: flex;
+}
+
+.exaples-img {
+  display: block;
 }
 
 /*элементы футера*/
