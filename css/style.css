@@ -47,13 +47,16 @@ ul {
 }
 
 .section {
-  padding: 94px 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .container {
   width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*элементы хедера*/
@@ -240,7 +243,7 @@ ul {
   font-weight: 500;
 }
 
-.card {
+.team-card {
   text-align: center;
 
   width: 270px;
@@ -249,7 +252,7 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.card:not(:last-child) {
+.team-card:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -295,24 +298,53 @@ footer {
 
 /*страница портфолио*/
 
-.portfolio-main {
-  padding: 94px 215px 94px 215px;
+.portfolio-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .button-nav {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+
   cursor: pointer;
   border-color: transparent;
   border-radius: 4px;
 }
 
-.button-nav {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
+.portfolio-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.work-list {
+  margin-right: -30px;
+  margin-bottom: -30px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  max-width: 370px;
+  border: 1px solid #eeeeee;
+}
+
+.work-card:nth-child(n + 7) {
+  margin-bottom: 0;
 }
 
 .work-name {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 20px;
+
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: 18px;
@@ -321,6 +353,9 @@ footer {
 }
 
 .work-type {
+  margin-bottom: 20px;
+  margin-left: 20px;
+
   font-size: 16px;
   line-height: 1.8;
   color: var(--second-text-color);
