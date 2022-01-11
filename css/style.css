@@ -146,7 +146,6 @@ ul {
 }
 
 .hero-button {
-  display: block;
   border-color: transparent;
   border-radius: 4px;
 
@@ -244,6 +243,8 @@ ul {
 }
 
 .team-card {
+  background-color: var(--color-white);
+
   text-align: center;
 
   width: 270px;
